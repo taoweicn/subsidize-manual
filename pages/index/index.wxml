@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header">
+    <input type="text" placeholder="输入你想搜索的内容" class="search-btn" />
+    <image src="../../public/img/search.svg" class="search-icon" />
+  </view>
+  <view class="content">
+    <view class="list-item" wx:for="{{list}}">
+      {{index + 1}}.{{item}}
+    </view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="header">
+    <image src="../../public/img/home.svg" class="home" />
+    <text class="title">奖助学金</text>
+    <image src="../../public/img/list.svg" class="list" />
+  </view>
+  <view class="content">
+    <view class="list-item" wx:for="{{list}}">
+      <view class="title">
+        {{item.title}}
+      </view>
+      <view class="text">
+        {{item.text}}
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/contact/contact",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "资助手册",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "资助手册",
+        "iconPath": "./public/img/manual.png",
+        "selectedIconPath": "./public/img/selectedManual.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "部门介绍",
+        "iconPath": "./public/img/apartment.png",
+        "selectedIconPath": "./public/img/selectedApartment.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "常见问题",
+        "iconPath": "./public/img/question.png",
+        "selectedIconPath": "./public/img/selectedQuestion.png"
+      },
+      {
+        "pagePath": "pages/detail/detail",
+        "text": "联系我们",
+        "iconPath": "./public/img/contact.png",
+        "selectedIconPath": "./public/img/selectedContact.png"
+      }
+    ],
+    "selectedColor": "#5192fc"
+  }
+}

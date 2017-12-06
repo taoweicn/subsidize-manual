@@ -1,0 +1,36 @@
+/**index.wxss**/
+.container {
+  padding-top: 120rpx;
+}
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 92%;
+  padding: 20rpx 4%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+}
+.search-btn {
+  width: 76%;
+  height: 60rpx;
+  padding: 10rpx 25rpx;
+  background-color: #e4ecf4;
+  border-radius: 18rpx;
+}
+.search-icon {
+  width: 80rpx;
+  height: 80rpx;
+}
+.content {
+  width: 100%;
+  background-color: #f3f5f8;
+}
+.list-item {
+  padding-left: 48rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 6rpx 0;
+  background-color: #fff;
+}
