@@ -1,4 +1,3 @@
-// pages/contact/contact.js
 Page({
 
   /**

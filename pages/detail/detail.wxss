@@ -1,13 +1,22 @@
+@keyframes slideDown {
+  from {
+    top: -50rpx;
+    opacity: 0;
+  }
+  to {
+    top: 105rpx;
+    opacity: 1;
+  }
+}
+
 .container {
-  padding-top: 120rpx;
   background-color: #f3f5f8;
 }
 .header {
-  position: fixed;
-  top: 0;
   display: flex;
   width: 92%;
-  padding: 20rpx 4%;
+  height: 100rpx;
+  padding: 0 4%;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
@@ -20,13 +29,35 @@
   color: #5192fc;
 }
 .content {
+  margin-top: 20rpx;
   width: 100%;
+  height: calc(100vh - 120rpx);
 }
 .list-item {
   padding: 10rpx 0 10rpx 30rpx;
-  background-color: #fff;
+  background-color: #f1f1f1;
 }
 .list-item .title {
   font-weight: 600;
   line-height: 60rpx;
+}
+.drop-menu {
+  display: none;
+}
+.drop-menu-show {
+  animation: slideDown 1s;
+  display: block;
+  position: fixed;
+  top: 105rpx;
+  right: 15rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  z-index: 100;
+}
+.menu-item {
+  padding: 10rpx 60rpx;
+  border-bottom: 1rpx solid #f3f5f8;
+}
+.menu-item:nth-last-child(1) {
+  border-style: none;
 }

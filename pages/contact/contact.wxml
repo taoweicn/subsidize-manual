@@ -1,2 +1,16 @@
-<!--pages/contact/contact.wxml-->
-<text>pages/contact/contact.wxml</text>
+<view class="container">
+    <text class="title">如果有资助方面的问题，提问渠道：</text>
+    <text class="list">
+        <text class="text">1.向本班班级助理询问</text>
+        <text class="text">2.向资委官方微信提问（见下）</text>
+        <text class="text">3.向资助中心咨询，地址：大活A栋501，电话：87543456/87544567</text>
+        <text class="text">4.班级助理可以在qq群：HUST17级班级资助助理（116436812）提问</text>
+        <text class="text">5.在白云黄鹤BBS—校园公益—学生工作部版面（student版）提问</text>
+    </text>
+    <view class="contact">
+        <text>电信学院资委会官方微信</text>
+        <text>微信号：husteizw(HUSTEI资委会）</text>
+        <text>华中大资助中心官方微信</text>
+        <text>微信号：hust_zwh(华中大资委会）</text>
+    </view>
+</view>

@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/apartment/apartment",
+    "pages/faq/faq",
     "pages/contact/contact",
     "pages/detail/detail"
   ],
@@ -15,26 +17,26 @@
       {
         "pagePath": "pages/index/index",
         "text": "资助手册",
-        "iconPath": "./public/img/manual.png",
-        "selectedIconPath": "./public/img/selectedManual.png"
+        "iconPath": "./public/tabBarImg/manual.png",
+        "selectedIconPath": "./public/tabBarImg/selectedManual.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/apartment/apartment",
         "text": "部门介绍",
-        "iconPath": "./public/img/apartment.png",
-        "selectedIconPath": "./public/img/selectedApartment.png"
+        "iconPath": "./public/tabBarImg/apartment.png",
+        "selectedIconPath": "./public/tabBarImg/selectedApartment.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/faq/faq",
         "text": "常见问题",
-        "iconPath": "./public/img/question.png",
-        "selectedIconPath": "./public/img/selectedQuestion.png"
+        "iconPath": "./public/tabBarImg/question.png",
+        "selectedIconPath": "./public/tabBarImg/selectedQuestion.png"
       },
       {
-        "pagePath": "pages/detail/detail",
+        "pagePath": "pages/contact/contact",
         "text": "联系我们",
-        "iconPath": "./public/img/contact.png",
-        "selectedIconPath": "./public/img/selectedContact.png"
+        "iconPath": "./public/tabBarImg/contact.png",
+        "selectedIconPath": "./public/tabBarImg/selectedContact.png"
       }
     ],
     "selectedColor": "#5192fc"

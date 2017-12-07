@@ -2,7 +2,7 @@
 <component-tag-name list="{{list}}">
   <view class="list-item" wx:for="{{list}}">
     <navigator url="../detail/detail">
-      {{index + 1}}.{{item}}
+      {{item}}
     </navigator>
   </view>
 </component-tag-name>

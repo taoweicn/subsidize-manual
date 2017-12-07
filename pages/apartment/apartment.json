@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "部门介绍",
+  "usingComponents": {
+    "component-tag-name": "../components/list/list"
+  }
+}

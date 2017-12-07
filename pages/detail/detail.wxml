@@ -1,18 +1,26 @@
-<!--pages/detail/detail.wxml-->
-<view class="container">
+<view class="container" bindtap="hideDropMenu">
   <view class="header">
-    <image src="../../public/img/home.svg" class="home" />
-    <text class="title">奖助学金</text>
-    <image src="../../public/img/list.svg" class="list" />
+    <navigator open-type="navigateBack">
+      <image src="../../public/img/home.svg" class="home" />
+    </navigator>
+    <text class="title">{{title}}</text>
+    <image src="../../public/img/list.svg" class="list" catchtap="dropMenu" />
+    <view class="{{showDropMenu ? 'drop-menu-show' : 'drop-menu'}}">
+      <block wx:for="{{list}}">
+        <view class="menu-item" bindtap="scrollToView" data-index="{{index}}">
+          {{item.title}}
+        </view>
+      </block>
+    </view>
   </view>
-  <view class="content">
+  <scroll-view class="content" scroll-y scroll-into-view="{{toView}}">
     <view class="list-item" wx:for="{{list}}">
-      <view class="title">
+      <view class="title" id="{{'id' + index}}">
         {{item.title}}
       </view>
       <view class="text">
         {{item.text}}
       </view>
     </view>
-  </view>
+  </scroll-view>
 </view>

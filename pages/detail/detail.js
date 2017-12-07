@@ -1,33 +1,55 @@
-// pages/detail/detail.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    title: "",
+    toView: "id0",
+    showDropMenu: false,
     list: [
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" },
-      { title: "种类", text: "国家奖学金" }
+      { title: "种类1", text: "国家奖学金"},
+      { title: "种类2", text: "国家奖学金"},
+      { title: "种类3", text: "国家奖学金"},
+      { title: "种类4", text: "国家奖学金"},
+      { title: "种类5", text: "国家奖学金"},
+      { title: "种类6", text: "国家奖学金"},
+      { title: "种类7", text: "国家奖学金"},
+      { title: "种类4", text: "国家奖学金"},
+      { title: "种类5", text: "国家奖学金"},
+      { title: "种类6", text: "国家奖学金"},
+      { title: "种类7", text: "国家奖学金"},
+      { title: "种类4", text: "国家奖学金"},
+      { title: "种类5", text: "国家奖学金"},
+      { title: "种类6", text: "国家奖学金"},
+      { title: "种类7", text: "国家奖学金"},
+      { title: "种类8", text: "国家奖学金"},
+      { title: "种类9", text: "国家奖学金"}
       ]
   },
 
+  scrollToView: function (e) {
+    let _id = e.target.dataset.index;
+    this.setData({
+      toView: 'id' + _id
+    })
+  },
+  dropMenu: function () {
+    this.setData({
+      showDropMenu: !this.data.showDropMenu
+    })
+  },
+  hideDropMenu: function () {
+    this.setData({
+      showDropMenu: false
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      title: options.title
+    })
   },
 
   /**
