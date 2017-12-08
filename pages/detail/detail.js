@@ -32,6 +32,7 @@ Page({
     this.setData({
       toView: 'id' + _id
     })
+    this.hideDropMenu()
   },
   dropMenu: function () {
     this.setData({
