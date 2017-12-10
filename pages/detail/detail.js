@@ -3,7 +3,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title: "",
+    title: "详情页",
     toView: "id0",
     showDropMenu: false,
     list: [

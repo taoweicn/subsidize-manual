@@ -1,8 +1,12 @@
 <!-- 以下是对自定义组件的引用 -->
 <component-tag-name list="{{list}}">
-  <view class="list-item" wx:for="{{list}}">
-    <navigator url="../detail/detail">
+  <navigator url="../detail/detail" class="list-item" wx:for="{{list}}">
+    <block wx:if="{{search}}">
+      <view class="search-title">{{item}}</view>
+      <view class="search-content">很多很多字，一般超过两行很多很多字，很多很多字，一般超过两行很多很多字，很多很多字，一般超过两行很多很多字，一般超过两行很多很多字，一般超过两行</view>
+    </block>
+    <view wx:else>
       {{index + 1}}.{{item}}
-    </navigator>
-  </view>
+    </view>
+  </navigator>
 </component-tag-name>

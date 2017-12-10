@@ -4,5 +4,6 @@ const app = getApp()
 Page({
   data: {
     list: ["常见问题", "常见问题", "常见问题", "常见问题", "常见问题"]
-  }
+  },
+  search: false
 })

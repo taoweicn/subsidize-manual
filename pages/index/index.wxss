@@ -1,7 +1,17 @@
 .list-item {
-    padding-left: 48rpx;
-    height: 80rpx;
-    line-height: 80rpx;
+    padding: 25rpx 48rpx;
     margin-bottom: 6rpx;
     background-color: #fff;
+    font-size: 36rpx;
+}
+.search-title {
+    font-weight: 700;
+    height: 60rpx;
+    font-size: 32rpx;
+}
+.search-content {
+    line-height: 40rpx;
+    max-height: 80rpx;
+    font-size: 28rpx;
+    overflow: hidden;
 }

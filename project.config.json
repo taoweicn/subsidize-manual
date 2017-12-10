@@ -9,8 +9,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.6.6",
-	"appid": "touristappid",
-	"projectname": "subsidize-manual",
+	"appid": "wx5e44eb4ad81e3357",
+	"projectname": "subsidize-manual-mina",
 	"condition": {
 		"search": {
 			"current": -1,
