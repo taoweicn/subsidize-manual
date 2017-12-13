@@ -1,4 +1,5 @@
 const manual = require('../../data/manual')
+const formatSearchResult = require('../../utils/formatSearchResult')
 
 Page({
   data: {
@@ -9,54 +10,14 @@ Page({
   },
 
   search: function (e) {
-    let searchKeywords = e.detail.inputValue.trim(), searchResultList = [], isSearched
+    let searchKeywords = e.detail.inputValue.trim(), searchResultList
     if (!searchKeywords) {
       this.setData({
         search: false
       })
       return
     }
-    manual.list.forEach(manualItem => {
-      manualItem.content.forEach((item, index) => {
-        isSearched = false
-        let result = {
-          title: [{
-            content: item.title,
-            keywords: ''
-          }],
-          text: [{
-            content: item.content,
-            keywords: ''
-          }],
-          type: manualItem.type,
-          introduction: manualItem.introduction,
-          toView: 'id' + index
-        }
-        if (item.title.indexOf(searchKeywords) > -1) {
-          result.title = []
-          item.title.split(searchKeywords).forEach(str => {
-            result.title.push({
-              content: str,
-              keywords: searchKeywords
-            })
-          })
-          isSearched = true
-        }
-        if (item.text.indexOf(searchKeywords) > -1) {
-          result.text = []
-          item.text.split(searchKeywords).forEach(str => {
-            result.text.push({
-              content: str,
-              keywords: searchKeywords
-            })
-          })
-          isSearched = true
-        }
-        if (isSearched) {
-          searchResultList.push(result)
-        }
-      })
-    })
+    searchResultList = formatSearchResult(manual, searchKeywords)
     this.setData({
       search: true,
       searchResultList: searchResultList
@@ -67,6 +28,12 @@ Page({
     this.setData({
       list: manual.list
     })
+  },
+
+  onShareAppMessage: function () {
+    return {
+      title: '资助手册'
+    }
   }
 })
 

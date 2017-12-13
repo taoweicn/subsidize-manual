@@ -3,7 +3,7 @@
     <input type="text" placeholder="输入你想搜索的内容" class="search-btn" bindinput="bindKeyInput" />
     <image src="../../../public/img/search.svg" class="search-icon" bindtap="search" />
   </view>
-  <scroll-view class="content" scroll-y>
+  <scroll-view class="content" scroll-y enable-back-to-top>
     <view class="placeholder1"></view>
    <slot></slot>
     <view class="placeholder2"></view>
