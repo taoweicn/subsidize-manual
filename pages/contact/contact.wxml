@@ -1,11 +1,11 @@
 <view class="container">
     <text class="title">{{title}}</text>
-    <text class="list">
+    <text class="list" selectable>
         <text wx:for="{{list}}">{{index + 1}}.{{item}}</text>
     </text>
     <view class="about">
         <view class="block" wx:for="{{about}}">
-            <text wx:for="{{item}}">{{item}}</text>
+            <text wx:for="{{item}}" selectable>{{item}}</text>
         </view>
     </view>
 </view>
