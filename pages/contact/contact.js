@@ -1,10 +1,14 @@
+const contact = require('../../data/contact')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    title: contact.title,
+    list: contact.list,
+    about: contact.about
   },
 
   /**

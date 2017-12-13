@@ -14,12 +14,15 @@
     </view>
   </view>
   <scroll-view class="content" scroll-y scroll-into-view="{{toView}}">
+    <view class="introduction" wx:if="{{introduction}}">
+      {{introduction}}
+    </view>
     <view class="list-item" wx:for="{{list}}">
       <view class="title" id="{{'id' + index}}">
         {{item.title}}
       </view>
-      <view class="text">
-        {{item.text}}
+      <view>
+        <text>{{item.text}}</text>
       </view>
     </view>
   </scroll-view>

@@ -14,6 +14,18 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+// 搜索一个数组中含有指定键名的某一项
+const searchKey = (key , name, array) => {
+  let result = '';
+  array.forEach(item => {
+    if (item[key] === name) {
+      result = item
+    }
+  })
+  return result
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  searchKey: searchKey
 }

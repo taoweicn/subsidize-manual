@@ -1,7 +1,7 @@
 <view class="container">
   <view class="header">
-    <input type="text" placeholder="输入你想搜索的内容" class="search-btn" />
-    <image src="../../../public/img/search.svg" class="search-icon" />
+    <input type="text" placeholder="输入你想搜索的内容" class="search-btn" bindinput="bindKeyInput" />
+    <image src="../../../public/img/search.svg" class="search-icon" bindtap="search" />
   </view>
   <scroll-view class="content" scroll-y>
     <view class="placeholder1"></view>

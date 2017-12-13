@@ -1,3 +1,8 @@
+const util = require('../../utils/util.js')
+const manual = require('../../data/manual')
+const apartment = require('../../data/apartment')
+const faq = require('../../data/faq')
+
 Page({
   /**
    * 页面的初始数据
@@ -6,25 +11,8 @@ Page({
     title: "详情页",
     toView: "id0",
     showDropMenu: false,
-    list: [
-      { title: "种类1", text: "国家奖学金"},
-      { title: "种类2", text: "国家奖学金"},
-      { title: "种类3", text: "国家奖学金"},
-      { title: "种类4", text: "国家奖学金"},
-      { title: "种类5", text: "国家奖学金"},
-      { title: "种类6", text: "国家奖学金"},
-      { title: "种类7", text: "国家奖学金"},
-      { title: "种类4", text: "国家奖学金"},
-      { title: "种类5", text: "国家奖学金"},
-      { title: "种类6", text: "国家奖学金"},
-      { title: "种类7", text: "国家奖学金"},
-      { title: "种类4", text: "国家奖学金"},
-      { title: "种类5", text: "国家奖学金"},
-      { title: "种类6", text: "国家奖学金"},
-      { title: "种类7", text: "国家奖学金"},
-      { title: "种类8", text: "国家奖学金"},
-      { title: "种类9", text: "国家奖学金"}
-      ]
+    list: [],
+    introduction: ''
   },
 
   scrollToView: function (e) {
@@ -48,9 +36,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let data, result;
+    switch(options.name) {
+      case 'manual':
+        data = manual
+        break
+      case 'apartment':
+        data = apartment
+        break
+      case 'faq':
+        data = faq
+        break
+      default:
+        data = ''
+    }
+    result = util.searchKey('type', options.title, data.list)
     this.setData({
-      title: options.title
+      title: options.title,
+      toView: options.toView,
+      introduction: options.introduction,
+      list: result.content
     })
+    console.log(this.data.list)
   },
 
   /**

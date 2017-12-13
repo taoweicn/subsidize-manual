@@ -1,12 +1,24 @@
 <!-- 以下是对自定义组件的引用 -->
-<component-tag-name list="{{list}}">
-  <navigator url="../detail/detail" class="list-item" wx:for="{{list}}">
-    <block wx:if="{{search}}">
-      <view class="search-title">{{item}}</view>
-      <view class="search-content">很多很多字，一般超过两行很多很多字，很多很多字，一般超过两行很多很多字，很多很多字，一般超过两行很多很多字，一般超过两行很多很多字，一般超过两行</view>
-    </block>
-    <view wx:else>
-      {{index + 1}}.{{item}}
+<component-tag-name bindsearchEvent="search">
+  <block wx:if="{{search && searchResultList.length}}">
+    <navigator url="../detail/detail?title={{item.type}}&introduction={{item.introduction}}&name=manual&toView={{item.toView}}" class="list-item" wx:for="{{searchResultList}}">
+      <view class="search-title">
+        {{item.type}}:  <text wx:for="{{item.title}}">{{item.content}}<text class="mark">{{item.keywords}}</text></text>
+      </view>
+      <view class="search-content">
+        <text wx:for="{{item.text}}">{{item.content}}<text class="mark">{{item.keywords}}</text></text>
+      </view>
+    </navigator>
+  </block>
+  <block wx:elif="{{search}}">
+    <view class="notfound">
+      抱歉，没有找到结果，请尝试更换搜索关键词！
+      <image src="../../public/img/notfound.svg" class="notfoundImg"/>
     </view>
-  </navigator>
+  </block>
+  <block wx:else>
+    <navigator url="../detail/detail?title={{item.type}}&introduction={{item.introduction}}&name=manual" class="list-item" wx:for="{{list}}">
+      {{index + 1}}.{{item.type}}
+    </navigator>
+  </block>
 </component-tag-name>

@@ -36,14 +36,17 @@
   width: 100%;
   height: calc(100vh - 136rpx);
   background-color: #f1f1f1;
-}
-.list-item {
-  padding: 0 30rpx 40rpx;
   font-size: 36rpx;
 }
+.introduction {
+  padding: 0 30rpx 40rpx;
+}
+.list-item {
+  padding: 0 40rpx 80rpx;
+}
 .list-item .title {
-  font-weight: 700;
   height: 60rpx;
+  font-weight: 700;
 }
 .drop-menu {
   display: none;
