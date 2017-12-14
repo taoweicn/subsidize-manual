@@ -1,7 +1,4 @@
 const util = require('../../utils/util.js')
-const manual = require('../../data/manual')
-const apartment = require('../../data/apartment')
-const faq = require('../../data/faq')
 
 Page({
   /**
@@ -43,13 +40,13 @@ Page({
     let data, result;
     switch(options.name) {
       case 'manual':
-        data = manual
+        data = require('../../data/manual')
         break
       case 'apartment':
-        data = apartment
+        data = require('../../data/apartment')
         break
       case 'faq':
-        data = faq
+        data = require('../../data/faq')
         break
       default:
         data = ''

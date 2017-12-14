@@ -1,6 +1,6 @@
 <view class="container">
   <view class="header">
-    <input type="text" placeholder="输入你想搜索的内容" class="search-btn" bindinput="bindKeyInput" />
+    <input type="text" placeholder="输入你想搜索的内容" class="search-btn" bindinput="bindKeyInput" confirm-type="search" bindconfirm="search" />
     <image src="../../../public/img/search.svg" class="search-icon" bindtap="search" />
   </view>
   <scroll-view class="content" scroll-y enable-back-to-top>
