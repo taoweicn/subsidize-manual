@@ -5,7 +5,27 @@
   </view>
   <scroll-view class="content" scroll-y enable-back-to-top>
     <view class="placeholder1"></view>
-   <slot></slot>
+      <block wx:if="{{isSearch && searchResultList.length}}">
+          <navigator wx:for="{{searchResultList}}" url="../detail/detail?title={{item.type}}&introduction={{item.introduction}}&name={{name}}&toView={{item.toView}}" class="list-item">
+              <view class="search-title">
+                  {{item.type}}:  <text wx:for="{{item.title}}">{{item.content}}<text class="mark">{{item.keywords}}</text></text>
+              </view>
+              <view class="search-content">
+                  <text wx:for="{{item.text}}">{{item.content}}<text class="mark">{{item.keywords}}</text></text>
+              </view>
+          </navigator>
+      </block>
+      <block wx:elif="{{isSearch}}">
+          <view class="notfound">
+              抱歉，没有找到结果，请尝试更换搜索关键词！
+              <image src="../../../public/img/notfound.svg" class="notfoundImg"/>
+          </view>
+      </block>
+      <block wx:else>
+          <navigator wx:for="{{data.list}}" url="../detail/detail?title={{item.type}}&introduction={{item.introduction}}&name={{name}}" class="list-item">
+              {{index + 1}}.{{item.type}}
+          </navigator>
+      </block>
     <view class="placeholder2"></view>
   </scroll-view>
 </view>

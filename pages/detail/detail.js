@@ -59,7 +59,6 @@ Page({
       introduction: options.introduction,
       list: result.content
     })
-    console.log(this.data.list)
   },
 
   /**
