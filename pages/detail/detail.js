@@ -14,7 +14,7 @@ Page({
   },
 
   scrollToView: function (e) {
-    let _id = e.target.dataset.index;
+    let _id = e.target.dataset.index
     this.setData({
       toView: 'id' + _id
     })
@@ -37,21 +37,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let data, result;
-    switch(options.name) {
-      case 'manual':
-        data = require('../../data/manual')
-        break
-      case 'apartment':
-        data = require('../../data/apartment')
-        break
-      case 'faq':
-        data = require('../../data/faq')
-        break
-      default:
-        data = ''
-    }
-    result = util.searchKey('type', options.title, data.list)
+    let data = require('../../data/' + options.name) || ''
+    let result = util.searchKey('type', options.title, data.list)
     this.setData({
       name: options.name,
       title: options.title,

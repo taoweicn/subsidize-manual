@@ -24,6 +24,7 @@ module.exports = function (data, searchKeywords) {
             keywords: searchKeywords
           })
         })
+        result.title[result.title.length - 1].keywords = ''
         isSearched = true
       }
       if (item.text.indexOf(searchKeywords) > -1) {
@@ -34,6 +35,7 @@ module.exports = function (data, searchKeywords) {
             keywords: searchKeywords
           })
         })
+        result.text[result.text.length - 1].keywords = ''
         isSearched = true
       }
       if (isSearched) {
