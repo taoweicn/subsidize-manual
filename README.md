@@ -11,10 +11,14 @@
 	<br><span style="font-size: 12px; color: #999;">主界面</span>
 </div>
 
+<br>
+
 <div align="center">
 	<img src="./preview/screenshot2.png" width="320"/>
 	<br><span style="font-size: 12px; color: #999;">详情页</span>
 </div>
+
+<br>
 
 <div align="center">
 	<img src="./preview/screenshot3.png" width="320"/>
