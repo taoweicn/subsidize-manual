@@ -9,7 +9,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.6.6",
 	"appid": "wx5e44eb4ad81e3357",
-	"projectname": "subsidize-manual-mina",
+	"projectname": "funding-manual-mina",
 	"condition": {
 		"search": {
 			"current": -1,
